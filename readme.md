@@ -1,7 +1,7 @@
 # Dual Graph Transformer for Molecular Property Prediction
 
 This repo is the implementation of the dual graph transformer for molecular property prediction.
-This model leverages the integration of atom and bond graphs for encoding comprehensive molecular information, including atom and bond features, graph topology and structure, and 3D spatial information if available, to enhance the prediction performance.
+This model integrates atom and bond graphs to encode the comprehensive molecular information, including atom and bond features, graph topology and structure, and 3D spatial information if available for enhanced molecular property prediction performance.
 
 ![dgt](./imgs/dgt.png)
 
@@ -22,8 +22,9 @@ pip install rdkit==2025.9.1
 pip install libauc==1.1.0
 ```
 
-Since molecular SMILES is not provided along with the the download link of `torch_geometric` for the QM9 dataset. We provide that together with the scaffold splitting result in the `datasets/QM9_split` folder. After downloading the QM dataset, please run all files under `datasets/QM9_split` to `datasets/QM9/raw`.  
+Since molecular SMILES is not provided along with the download link from the `torch_geometric` package for the QM9 dataset. We provide that in the `datasets/QM9_split` folder, together with the scaffold splitting results. After downloading the QM dataset, please copy files under `datasets/QM9_split` to `datasets/QM9/raw`.  
 
-Configuration files for reproducing our results are provided in the `configs` folder.  
+Config files for reproducing our results are provided in the `configs` folder.  
 To train from scratch, run `python main.py --cfg config_file_path --repeat 1 seed 0 wandb.use False`.  
-This implementation is developed from graphgps. For more information, please check
+
+This implementation is developed from graphgps. For more information, please check [https://github.com/rampasek/GraphGPS.git](https://github.com/rampasek/GraphGPS.git)
